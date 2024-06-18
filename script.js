@@ -12,7 +12,13 @@ function makeGrid() {
             square.className = 'grid';
 
             square.addEventListener('mouseover', () => {
-                square.style.backgroundColor = 'black';
+                let R = Math.floor(Math.random() * 256);
+                let G = Math.floor(Math.random() * 256);
+                let B = Math.floor(Math.random() * 256);
+                let randomColor = 'rgb(' + R + ',' + G + ',' + B + ')';
+                console.log(R);
+                console.log(randomColor);
+                square.style.backgroundColor = randomColor;
             })
         
         column.appendChild(square);
