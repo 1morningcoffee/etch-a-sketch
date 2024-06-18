@@ -1,24 +1,30 @@
 const container = document.querySelector("#container");
 const gridContainer = document.querySelector('#gridContainer');
 const startButton = document.querySelector('#startGame');
+let gridSize = 16;
 
-for (let i = 0; i <  16; i++) {
-    const column = document.createElement('div');
-    column.className = 'column';
-    for (let j = 0; j < 16; j++) {
-        const square = document.createElement('div');
-        square.className = 'grid';
+function makeGrid() {
+    for (let i = 0; i < gridSize; i++) {
+        const column = document.createElement('div');
+        column.className = 'column';
+        for (let j = 0; j < gridSize; j++) {
+            const square = document.createElement('div');
+            square.className = 'grid';
 
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black';
-        })
-    
-    column.appendChild(square);
+            square.addEventListener('mouseover', () => {
+                square.style.backgroundColor = 'black';
+            })
+        
+        column.appendChild(square);
+        }
+        
+        gridContainer.appendChild(column);
     }
-    
-    gridContainer.appendChild(column);
 }
 
+makeGrid();
+
 startButton.addEventListener('click', () => {
-    prompt('How many squares should each side of the grid contain?');
+    gridSize = prompt('How many squares should each side of the grid contain?');
+    makeGrid();
 })
