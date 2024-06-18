@@ -26,5 +26,8 @@ makeGrid();
 
 startButton.addEventListener('click', () => {
     gridSize = prompt('How many squares should each side of the grid contain?');
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.lastChild);
+    }
     makeGrid();
 })
