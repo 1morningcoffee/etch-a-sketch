@@ -21,6 +21,10 @@
 #startGame {
     height: 25px;
     width: 100px;
-    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
+p {
+    margin-top: -20px;
+}
