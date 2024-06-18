@@ -6,4 +6,11 @@
 #container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
+
+#startGame {
+    height: 25px;
+    width: 100px;
+}
+
