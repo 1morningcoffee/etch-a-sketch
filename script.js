@@ -16,8 +16,6 @@ function makeGrid() {
                 let G = Math.floor(Math.random() * 256);
                 let B = Math.floor(Math.random() * 256);
                 let randomColor = 'rgb(' + R + ',' + G + ',' + B + ')';
-                console.log(R);
-                console.log(randomColor);
                 square.style.backgroundColor = randomColor;
             })
         
